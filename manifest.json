@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Hide Amazon Deals on Slickdeals",
+  "version": "1.0.0",
+  "description": "Hides Amazon-branded deal cards on Slickdeals listing pages.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "hide-amazon-slickdeals@bfsmith",
+      "strict_min_version": "109.0"
+    }
+  },
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://slickdeals.net/*",
+    "https://*.slickdeals.net/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    }
+  },
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://slickdeals.net/*",
+        "https://*.slickdeals.net/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
