@@ -1,0 +1,26 @@
+{
+  "name": "slickdeals-ext",
+  "version": "1.0.0",
+  "description": "Firefox and Chrome extension that hides Amazon-branded deal cards on Slickdeals listing pages.",
+  "main": "background.js",
+  "scripts": {
+    "sign:ff": "web-ext sign --channel unlisted --api-key $FF_ADDON_API_KEY --api-secret FF_ADDON_API_SECRET",
+    "build": "web-ext build",
+    "lint": "web-ext lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bfsmith/slickdeals-ext.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bfsmith/slickdeals-ext/issues"
+  },
+  "homepage": "https://github.com/bfsmith/slickdeals-ext#readme",
+  "devDependencies": {
+    "web-ext": "^10.6.0"
+  }
+}
