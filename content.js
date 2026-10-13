@@ -13,9 +13,11 @@ const CARD_SELECTORS = [
 
 const STORE_SELECTORS = [
   ".dealCard__storeLink",
+  ".dealCardGridV2__store",
   ".dealCardListView__store",
   ".bp-p-dealCard_storeLink",
   ".itemStore",
+  '[data-qa="deal-card-store"]',
 ];
 
 let enabled = true;
